@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondo Kitchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            color: #444;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #666;
+        }
+        nav a:hover {
+            color: #111;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .menu-item {
+            margin-bottom: 15px;
+        }
+        .menu-item h3 {
+            margin: 5px 0;
+        }
+        .reservation-form {
+            margin-top: 20px;
+        }
+        .reservation-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .reservation-form input, .reservation-form textarea, .reservation-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .reservation-form button {
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+        .reservation-form button:hover {
+            background-color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mondo Kitchen</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container" id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Spaghetti Bolognese</h3>
+            <p>Classic Italian pasta with rich tomato sauce and beef.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Grilled Chicken Salad</h3>
+            <p>Fresh greens topped with grilled chicken and balsamic dressing.</p>
+        </div>
+    </div>
+
+    <div class="container" id="reservation">
+        <h2>Make a Reservation</h2>
+        <form class="reservation-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Special Requests</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Food Street, Flavor Town</p>
+        <p>Phone: +1 234 567 890</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mondo Kitchen</p>
+    </footer>
+
+    <script>
+        document.querySelector('.reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            alert(`Reservation confirmed for ${name} on ${date}!`);
+        });
+    </script>
+</body>
+</html>
